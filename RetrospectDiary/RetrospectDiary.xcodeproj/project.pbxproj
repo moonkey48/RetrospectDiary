@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		95D609D42AAC4424005DCD1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D609D32AAC4424005DCD1A /* AppDelegate.swift */; };
 		95D609D62AAC4424005DCD1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D609D52AAC4424005DCD1A /* SceneDelegate.swift */; };
-		95D609D82AAC4424005DCD1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D609D72AAC4424005DCD1A /* ViewController.swift */; };
+		95D609D82AAC4424005DCD1A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D609D72AAC4424005DCD1A /* MainViewController.swift */; };
 		95D609DE2AAC4424005DCD1A /* RetrospectDiary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95D609DC2AAC4424005DCD1A /* RetrospectDiary.xcdatamodeld */; };
 		95D609E02AAC4426005DCD1A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95D609DF2AAC4426005DCD1A /* Images.xcassets */; };
 		95D609E32AAC4426005DCD1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D609E12AAC4426005DCD1A /* LaunchScreen.storyboard */; };
+		95D609F02AAC8F34005DCD1A /* RetrospectListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D609EF2AAC8F34005DCD1A /* RetrospectListItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		95D609D02AAC4424005DCD1A /* RetrospectDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetrospectDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D609D32AAC4424005DCD1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95D609D52AAC4424005DCD1A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		95D609D72AAC4424005DCD1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		95D609D72AAC4424005DCD1A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		95D609DD2AAC4424005DCD1A /* RetrospectDiary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RetrospectDiary.xcdatamodel; sourceTree = "<group>"; };
 		95D609DF2AAC4426005DCD1A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		95D609E22AAC4426005DCD1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95D609E42AAC4426005DCD1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95D609EF2AAC8F34005DCD1A /* RetrospectListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrospectListItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +88,9 @@
 		95D609EC2AAC4470005DCD1A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				95D609EE2AAC8F0E005DCD1A /* Components */,
 				95D609E12AAC4426005DCD1A /* LaunchScreen.storyboard */,
+				95D609EF2AAC8F34005DCD1A /* RetrospectListItemView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -94,9 +98,16 @@
 		95D609ED2AAC4482005DCD1A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				95D609D72AAC4424005DCD1A /* ViewController.swift */,
+				95D609D72AAC4424005DCD1A /* MainViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		95D609EE2AAC8F0E005DCD1A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,8 +181,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				95D609DE2AAC4424005DCD1A /* RetrospectDiary.xcdatamodeld in Sources */,
-				95D609D82AAC4424005DCD1A /* ViewController.swift in Sources */,
+				95D609D82AAC4424005DCD1A /* MainViewController.swift in Sources */,
 				95D609D42AAC4424005DCD1A /* AppDelegate.swift in Sources */,
+				95D609F02AAC8F34005DCD1A /* RetrospectListItemView.swift in Sources */,
 				95D609D62AAC4424005DCD1A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,7 +328,6 @@
 				INFOPLIST_FILE = RetrospectDiary/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -345,7 +356,6 @@
 				INFOPLIST_FILE = RetrospectDiary/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
