@@ -10,12 +10,11 @@ import UIKit
 
 class MainViewController: UIViewController {
     lazy var tableView = UITableView(frame: .zero, style: .insetGrouped)
-    let data = [
-        ["Test 1-1","Test 1-2","Test 1-3","Test 1-4"],
-        ["Test 2-1","Test 2-2","Test 2-3"],
-        ["Test 3-1","Test 3-2"]
+    let restospectDummyData = [
+        RetrospectModel(title: "MC3를 보내며", method: CSSMethod(continuePoint: "1", stopPoint: "2", startPoint: "3")),
+        RetrospectModel(title: "MC2를 보내며", method: CSSMethod(continuePoint: "1", stopPoint: "2", startPoint: "3")),
+        RetrospectModel(title: "MC1를 보내며", method: CSSMethod(continuePoint: "1", stopPoint: "2", startPoint: "3")),
     ]
-    let header = ["Section 1","Section 2","Section 3"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,21 +48,13 @@ class MainViewController: UIViewController {
 }
 extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        data[section].count
+        restospectDummyData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath)
-        cell.textLabel?.text = data[indexPath.section][indexPath.row]
+        cell.textLabel?.text = restospectDummyData[indexPath.row].title
         return cell
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return header.count
-    }
-
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return header[section]
     }
 }
 extension MainViewController: UITableViewDelegate {

@@ -9,6 +9,7 @@ import UIKit
 
 class CustomTableViewCell: UITableViewCell {
     static let cellId = "CustomTableViewCell"
+    var restospectModel = RetrospectModel(title: "MC2를 보내며", method: CSSMethod(continuePoint: "", stopPoint: "", startPoint: ""))
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -17,8 +18,5 @@ class CustomTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-
 }
