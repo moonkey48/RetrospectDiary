@@ -30,6 +30,7 @@ class MainViewController: UIViewController {
     private func setAttributes(){
         view.backgroundColor = .white
         tableView.dataSource = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
     }
     
     private func setConstraints(){
@@ -51,7 +52,7 @@ extension MainViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: .none)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
         cell.textLabel?.text = data[indexPath.section][indexPath.row]
         return cell
     }
