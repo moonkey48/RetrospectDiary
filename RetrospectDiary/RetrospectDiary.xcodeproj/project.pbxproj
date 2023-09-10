@@ -16,6 +16,7 @@
 		95D609F22AADB0BD005DCD1A /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D609F12AADB0BD005DCD1A /* CustomTableViewCell.swift */; };
 		95D609F52AADB392005DCD1A /* RetrospectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D609F42AADB392005DCD1A /* RetrospectModel.swift */; };
 		95D609F72AADB847005DCD1A /* RetrospectMethodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D609F62AADB847005DCD1A /* RetrospectMethodModel.swift */; };
+		95D609FB2AADBCD7005DCD1A /* RetrospectMethodTypeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D609FA2AADBCD7005DCD1A /* RetrospectMethodTypeProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		95D609F12AADB0BD005DCD1A /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		95D609F42AADB392005DCD1A /* RetrospectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrospectModel.swift; sourceTree = "<group>"; };
 		95D609F62AADB847005DCD1A /* RetrospectMethodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrospectMethodModel.swift; sourceTree = "<group>"; };
+		95D609FA2AADBCD7005DCD1A /* RetrospectMethodTypeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrospectMethodTypeProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 			children = (
 				95D609D32AAC4424005DCD1A /* AppDelegate.swift */,
 				95D609D52AAC4424005DCD1A /* SceneDelegate.swift */,
+				95D609F82AADBCB6005DCD1A /* Utils */,
 				95D609ED2AAC4482005DCD1A /* Controller */,
 				95D609F32AADB363005DCD1A /* Model */,
 				95D609EC2AAC4470005DCD1A /* View */,
@@ -122,6 +125,22 @@
 				95D609F62AADB847005DCD1A /* RetrospectMethodModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		95D609F82AADBCB6005DCD1A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				95D609F92AADBCBD005DCD1A /* Protocol */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		95D609F92AADBCBD005DCD1A /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				95D609FA2AADBCD7005DCD1A /* RetrospectMethodTypeProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95D609DE2AAC4424005DCD1A /* RetrospectDiary.xcdatamodeld in Sources */,
+				95D609FB2AADBCD7005DCD1A /* RetrospectMethodTypeProtocol.swift in Sources */,
 				95D609F22AADB0BD005DCD1A /* CustomTableViewCell.swift in Sources */,
 				95D609D82AAC4424005DCD1A /* MainViewController.swift in Sources */,
 				95D609D42AAC4424005DCD1A /* AppDelegate.swift in Sources */,

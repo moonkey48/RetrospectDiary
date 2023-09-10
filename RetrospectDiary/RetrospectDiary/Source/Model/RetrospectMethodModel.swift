@@ -15,25 +15,21 @@ enum RetrospectMethod {
     case pmi
 }
 
-protocol RetrospectMethodType {
-    var methodType: RetrospectMethod { get set }
-}
-
-struct CSSMethod: RetrospectMethodType {
+struct CSSMethod: RetrospectMethodTypeProtocol {
     var methodType: RetrospectMethod = .css
     var continuePoint: String
     var stopPoint: String
     var startPoint: String
 }
 
-struct KPTMethod {
+struct KPTMethod: RetrospectMethodTypeProtocol {
     var methodType: RetrospectMethod = .kpt
     var keepPoint: String
     var tryPoint: String
     var problemPoint: String
 }
 
-struct FiveFMethod {
+struct FiveFMethod: RetrospectMethodTypeProtocol {
     var methodType: RetrospectMethod = .fiveF
     var factPotint: String
     var feelingPoint: String
@@ -42,7 +38,7 @@ struct FiveFMethod {
     var feedbackPoint: String
 }
 
-struct FourLMethod {
+struct FourLMethod: RetrospectMethodTypeProtocol {
     var methodType: RetrospectMethod = .fourL
     var likedPoint: String
     var lackedPoint: String
@@ -50,7 +46,7 @@ struct FourLMethod {
     var longedForPoint: String
 }
 
-struct PMIMethod {
+struct PMIMethod: RetrospectMethodTypeProtocol {
     var methodType: RetrospectMethod = .pmi
     var pluePoint: String
     var minuePoint: String

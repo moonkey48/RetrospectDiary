@@ -11,6 +11,6 @@ struct RetrospectModel {
     var startDate = Date()
     var endDate = Date()
     var title: String
-    var method: RetrospectMethod
-    
+    var isMilestone: Bool = false
+    var method: RetrospectMethodTypeProtocol
 }
