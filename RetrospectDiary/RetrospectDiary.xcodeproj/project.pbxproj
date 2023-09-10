@@ -90,7 +90,6 @@
 			children = (
 				95D609EE2AAC8F0E005DCD1A /* Components */,
 				95D609E12AAC4426005DCD1A /* LaunchScreen.storyboard */,
-				95D609EF2AAC8F34005DCD1A /* RetrospectListItemView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -106,6 +105,7 @@
 		95D609EE2AAC8F0E005DCD1A /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				95D609EF2AAC8F34005DCD1A /* RetrospectListItemView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
