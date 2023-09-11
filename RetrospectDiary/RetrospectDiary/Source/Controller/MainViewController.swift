@@ -63,6 +63,12 @@ extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath)
         setTableCellAttributes(cell, indexPath)
+        cell.backgroundColor = .white
+        cell.layer.shadowColor = UIColor.red.cgColor
+        cell.layer.shadowOpacity = 1
+        cell.layer.shadowRadius = 1
+        cell.layer.shadowOffset = CGSize(width: 10, height: 10)
+        
         return cell
     }
     private func setTableCellAttributes(_ cell: UITableViewCell, _ indexPath: IndexPath) {
@@ -74,7 +80,7 @@ extension MainViewController: UITableViewDataSource {
     private func setTableCellDateLabel(_ cell: UITableViewCell, _ cellData: RetrospectModel) {
         let dateLabel = UILabel()
         
-        dateLabel.text = cellData.endDate.description
+        dateLabel.text = Date.setDateFormat(date: cellData.endDate)
         cell.addSubview(dateLabel)
         
         dateLabel.translatesAutoresizingMaskIntoConstraints = false
