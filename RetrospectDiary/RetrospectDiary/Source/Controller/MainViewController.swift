@@ -63,20 +63,32 @@ extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath)
         setTableCellAttributes(cell, indexPath)
-        cell.backgroundColor = .white
-        cell.layer.shadowColor = UIColor.red.cgColor
-        cell.layer.shadowOpacity = 1
-        cell.layer.shadowRadius = 1
-        cell.layer.shadowOffset = CGSize(width: 10, height: 10)
         
         return cell
     }
     private func setTableCellAttributes(_ cell: UITableViewCell, _ indexPath: IndexPath) {
         let cellData = restospectDummyData[indexPath.row]
+        setBackground(cell)
         setTableCellDateLabel(cell, cellData)
         setTableCellTitleLabel(cell, cellData)
         setTableCellDescription(cell, cellData)
     }
+    
+    private func setBackground(_ cell: UITableViewCell) {
+        let bgView = UIView()
+        cell.addSubview(bgView)
+        bgView.backgroundColor = .gray
+        bgView.clipsToBounds = false
+        
+        bgView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            bgView.leadingAnchor.constraint(equalTo: cell.leadingAnchor, constant: 0),
+            bgView.trailingAnchor.constraint(equalTo: cell.trailingAnchor, constant: 0),
+            bgView.topAnchor.constraint(equalTo: cell.topAnchor, constant: 0),
+            bgView.bottomAnchor.constraint(equalTo: cell.bottomAnchor, constant: 0),
+        ])
+    }
+    
     private func setTableCellDateLabel(_ cell: UITableViewCell, _ cellData: RetrospectModel) {
         let dateLabel = UILabel()
         
@@ -97,6 +109,7 @@ extension MainViewController: UITableViewDataSource {
         titleLabel.leadingAnchor.constraint(equalTo: cell.leadingAnchor, constant: 16).isActive = true
         titleLabel.topAnchor.constraint(equalTo: cell.topAnchor, constant: 36).isActive = true
     }
+    
     private func setTableCellDescription(_ cell:UITableViewCell, _ cellData: RetrospectModel) {
         let methodLabel = UILabel()
         if let method = cellData.method as? CSSMethod {
@@ -110,15 +123,15 @@ extension MainViewController: UITableViewDataSource {
     }
 }
 
-
 extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("\(indexPath.section)\(indexPath.row)")
         tableView.cellForRow(at: indexPath)?.backgroundColor = .blue
+        let retrospectDetailViewController = RetrospectDetailViewController(restrospectData: restospectDummyData[indexPath.section])
+        present(retrospectDetailViewController, animated: true)
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 136
     }
-    
 }
-

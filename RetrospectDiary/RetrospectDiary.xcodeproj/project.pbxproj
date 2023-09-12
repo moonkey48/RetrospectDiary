@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9517A1512AAF60EB003D640D /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9517A1502AAF60EB003D640D /* Date+Extension.swift */; };
+		9517A1532AB0811A003D640D /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9517A1522AB0811A003D640D /* UIView+Extension.swift */; };
+		9517A1552AB086AC003D640D /* RetrospectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9517A1542AB086AC003D640D /* RetrospectDetailViewController.swift */; };
 		95D609D42AAC4424005DCD1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D609D32AAC4424005DCD1A /* AppDelegate.swift */; };
 		95D609D62AAC4424005DCD1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D609D52AAC4424005DCD1A /* SceneDelegate.swift */; };
 		95D609D82AAC4424005DCD1A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D609D72AAC4424005DCD1A /* MainViewController.swift */; };
@@ -22,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		9517A1502AAF60EB003D640D /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		9517A1522AB0811A003D640D /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		9517A1542AB086AC003D640D /* RetrospectDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrospectDetailViewController.swift; sourceTree = "<group>"; };
 		95D609D02AAC4424005DCD1A /* RetrospectDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetrospectDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D609D32AAC4424005DCD1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95D609D52AAC4424005DCD1A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				9517A1502AAF60EB003D640D /* Date+Extension.swift */,
+				9517A1522AB0811A003D640D /* UIView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -116,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				95D609D72AAC4424005DCD1A /* MainViewController.swift */,
+				9517A1542AB086AC003D640D /* RetrospectDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -226,12 +232,14 @@
 			files = (
 				95D609DE2AAC4424005DCD1A /* RetrospectDiary.xcdatamodeld in Sources */,
 				95D609FB2AADBCD7005DCD1A /* RetrospectMethodTypeProtocol.swift in Sources */,
+				9517A1552AB086AC003D640D /* RetrospectDetailViewController.swift in Sources */,
 				95D609F22AADB0BD005DCD1A /* CustomTableViewCell.swift in Sources */,
 				95D609D82AAC4424005DCD1A /* MainViewController.swift in Sources */,
 				95D609D42AAC4424005DCD1A /* AppDelegate.swift in Sources */,
 				95D609F52AADB392005DCD1A /* RetrospectModel.swift in Sources */,
 				95D609D62AAC4424005DCD1A /* SceneDelegate.swift in Sources */,
 				95D609F72AADB847005DCD1A /* RetrospectMethodModel.swift in Sources */,
+				9517A1532AB0811A003D640D /* UIView+Extension.swift in Sources */,
 				9517A1512AAF60EB003D640D /* Date+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

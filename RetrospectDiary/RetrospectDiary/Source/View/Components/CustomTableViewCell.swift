@@ -8,6 +8,8 @@
 import UIKit
 
 class CustomTableViewCell: UITableViewCell {
+    let dateLabel = UILabel()
+    
     static let cellId = "CustomTableViewCell"
     var restospectModel = RetrospectModel(title: "MC2를 보내며", method: CSSMethod(continuePoint: "", stopPoint: "", startPoint: ""))
 
