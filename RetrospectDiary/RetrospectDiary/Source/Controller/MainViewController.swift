@@ -32,7 +32,7 @@ class MainViewController: UIViewController {
         view.backgroundColor = .white
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: "CustomTableViewCell")
+        tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.cellId)
         tableView.backgroundColor = .white
     }
     
@@ -61,65 +61,18 @@ extension MainViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath)
-        setTableCellAttributes(cell, indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.cellId, for: indexPath)
+        setTableCellAttributes(cell as! CustomTableViewCell, indexPath)
         
         return cell
     }
-    private func setTableCellAttributes(_ cell: UITableViewCell, _ indexPath: IndexPath) {
-        let cellData = restospectDummyData[indexPath.row]
-        setBackground(cell)
-        setTableCellDateLabel(cell, cellData)
-        setTableCellTitleLabel(cell, cellData)
-        setTableCellDescription(cell, cellData)
-    }
-    
-    private func setBackground(_ cell: UITableViewCell) {
-        let bgView = UIView()
-        cell.addSubview(bgView)
-        bgView.backgroundColor = .gray
-        bgView.clipsToBounds = false
-        
-        bgView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            bgView.leadingAnchor.constraint(equalTo: cell.leadingAnchor, constant: 0),
-            bgView.trailingAnchor.constraint(equalTo: cell.trailingAnchor, constant: 0),
-            bgView.topAnchor.constraint(equalTo: cell.topAnchor, constant: 0),
-            bgView.bottomAnchor.constraint(equalTo: cell.bottomAnchor, constant: 0),
-        ])
-    }
-    
-    private func setTableCellDateLabel(_ cell: UITableViewCell, _ cellData: RetrospectModel) {
-        let dateLabel = UILabel()
-        
-        dateLabel.text = Date.setDateFormat(date: cellData.endDate)
-        cell.addSubview(dateLabel)
-        
-        dateLabel.translatesAutoresizingMaskIntoConstraints = false
-        dateLabel.leadingAnchor.constraint(equalTo: cell.leadingAnchor, constant: 16).isActive = true
-        dateLabel.topAnchor.constraint(equalTo: cell.topAnchor, constant: 16).isActive = true
-    }
-    
-    private func setTableCellTitleLabel(_ cell:UITableViewCell, _ cellData: RetrospectModel) {
-        let titleLabel = UILabel()
-        titleLabel.text = cellData.title
-        cell.addSubview(titleLabel)
-
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.leadingAnchor.constraint(equalTo: cell.leadingAnchor, constant: 16).isActive = true
-        titleLabel.topAnchor.constraint(equalTo: cell.topAnchor, constant: 36).isActive = true
-    }
-    
-    private func setTableCellDescription(_ cell:UITableViewCell, _ cellData: RetrospectModel) {
-        let methodLabel = UILabel()
-        if let method = cellData.method as? CSSMethod {
-            methodLabel.text = method.continuePoint
+    private func setTableCellAttributes(_ cell: CustomTableViewCell, _ indexPath: IndexPath) {
+        let cellData = restospectDummyData[indexPath.section]
+        cell.dateLabel.text = Date.setDateFormat(date: cellData.startDate)
+        cell.titleLabel.text = cellData.title
+        if let cssMethod = cellData.method as? CSSMethod {
+            cell.methodLabel.text = cssMethod.continuePoint
         }
-        cell.addSubview(methodLabel)
-
-        methodLabel.translatesAutoresizingMaskIntoConstraints = false
-        methodLabel.leadingAnchor.constraint(equalTo: cell.leadingAnchor, constant: 16).isActive = true
-        methodLabel.topAnchor.constraint(equalTo: cell.topAnchor, constant: 86).isActive = true
     }
 }
 
