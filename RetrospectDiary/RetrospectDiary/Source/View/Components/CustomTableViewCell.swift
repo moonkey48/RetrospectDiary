@@ -22,8 +22,6 @@ class CustomTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        layer.masksToBounds = false
-        clipsToBounds = false
         setBackground(self)
         setTableCellDateLabel(self, restospectModel)
         setTableCellTitleLabel(self, restospectModel)
@@ -51,6 +49,15 @@ class CustomTableViewCell: UITableViewCell {
         bgView.layer.masksToBounds = false
         bgView.layer.borderWidth = 1
         bgView.layer.borderColor = UIColor.systemGray6.cgColor
+        
+        
+        cell.layer.masksToBounds = false
+        bgView.layer.masksToBounds = false
+        bgView.layer.shadowColor = UIColor.red.cgColor
+        bgView.layer.shadowOpacity = 1
+        bgView.layer.shadowRadius = 1
+        bgView.layer.shadowOffset = CGSize(width: 10, height: 10)
+        bgView.layer.shadowPath = nil
         
         bgView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
