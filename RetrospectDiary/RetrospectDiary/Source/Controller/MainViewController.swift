@@ -8,7 +8,9 @@
 import UIKit
 
 let restospectDummyData = [
+    RetrospectModel(title: "NC2를 보내며", method: CSSMethod(continuePoint: "최선을 다했다.", stopPoint: "최선을 다하지 못했다.", startPoint: "최선을 다하자")),
     RetrospectModel(title: "MC3를 보내며", method: CSSMethod(continuePoint: "최선을 다했다.", stopPoint: "최선을 다하지 못했다.", startPoint: "최선을 다하자")),
+    RetrospectModel(title: "NC1을 보내며", method: CSSMethod(continuePoint: "최선을 다했다.", stopPoint: "최선을 다하지 못했다.", startPoint: "최선을 다하자")),
     RetrospectModel(title: "MC2를 보내며", method: CSSMethod(continuePoint: "최선을 다했다.", stopPoint: "최선을 다하지 못했다.", startPoint: "최선을 다하자")),
     RetrospectModel(title: "MC1를 보내며", method: CSSMethod(continuePoint: "최선을 다했다.", stopPoint: "최선을 다하지 못했다.", startPoint: "최선을 다하자")),
 ]
@@ -29,6 +31,8 @@ class MainViewController: UIViewController {
         tableView.delegate = self
         tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.cellId)
         tableView.backgroundColor = .systemGray6
+        tableView.sectionFooterHeight = 7
+        tableView.sectionHeaderHeight = 7
     }
     
     private func setConstraints(){
