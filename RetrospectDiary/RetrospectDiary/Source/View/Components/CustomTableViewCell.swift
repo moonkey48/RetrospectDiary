@@ -18,15 +18,17 @@ class CustomTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        layer.masksToBounds = false
+        clipsToBounds = false
         setBackground(self)
         setTableCellDateLabel(self, restospectModel)
         setTableCellTitleLabel(self, restospectModel)
         setTableCellDescription(self, restospectModel)
-//        layoutCellProperties()
+        setTableCellInnerDivider(self)
     }
     
     required init?(coder: NSCoder) {
@@ -34,8 +36,6 @@ class CustomTableViewCell: UITableViewCell {
     }
     
     override func prepareForReuse() {
-        
-//        아래 부분 주석은 나중에 해제해 줍시다.
 //        profileImageView.image = nil
     }
     
@@ -45,8 +45,10 @@ class CustomTableViewCell: UITableViewCell {
     
     private func setBackground(_ cell: UITableViewCell) {
         cell.addSubview(bgView)
-        bgView.backgroundColor = .gray
-        bgView.clipsToBounds = false
+        
+        bgView.layer.cornerRadius = 10
+        bgView.backgroundColor = .white
+        bgView.layer.masksToBounds = false
         
         bgView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -60,6 +62,8 @@ class CustomTableViewCell: UITableViewCell {
     private func setTableCellDateLabel(_ cell: UITableViewCell, _ cellData: RetrospectModel) {
         dateLabel.text = Date.setDateFormat(date: cellData.endDate)
         cell.addSubview(dateLabel)
+        dateLabel.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
+        dateLabel.textColor = UIColor(named: "custom_gray1")
         
         dateLabel.translatesAutoresizingMaskIntoConstraints = false
         dateLabel.leadingAnchor.constraint(equalTo: cell.leadingAnchor, constant: 16).isActive = true
@@ -67,12 +71,25 @@ class CustomTableViewCell: UITableViewCell {
     }
     
     private func setTableCellTitleLabel(_ cell:UITableViewCell, _ cellData: RetrospectModel) {
-        titleLabel.text = cellData.title
         cell.addSubview(titleLabel)
+        titleLabel.text = cellData.title
+        titleLabel.font = UIFont.systemFont(ofSize: 24, weight: .bold)
+        titleLabel.textColor = UIColor(named: "custom_gray3")
 
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.leadingAnchor.constraint(equalTo: cell.leadingAnchor, constant: 16).isActive = true
         titleLabel.topAnchor.constraint(equalTo: cell.topAnchor, constant: 36).isActive = true
+    }
+    private func setTableCellInnerDivider(_ cell: UITableViewCell) {
+        let divider = UIView()
+        cell.addSubview(divider)
+        divider.backgroundColor = UIColor(named: "custom_gray0")
+        
+        divider.translatesAutoresizingMaskIntoConstraints = false
+        divider.topAnchor.constraint(equalTo: cell.topAnchor, constant: 70).isActive = true
+        divider.leadingAnchor.constraint(equalTo: cell.leadingAnchor, constant: 16).isActive = true
+        divider.trailingAnchor.constraint(equalTo: cell.trailingAnchor, constant: 16).isActive = true
+        divider.heightAnchor.constraint(equalToConstant: 2).isActive = true
     }
     
     private func setTableCellDescription(_ cell:UITableViewCell, _ cellData: RetrospectModel) {
