@@ -18,6 +18,7 @@ let restospectDummyData = [
 class MainViewController: UIViewController {
     lazy var tableView = UITableView(frame: .zero, style: .insetGrouped)
     lazy var topImage = UIImage(named: "mainVC_character")
+    lazy var bottomButton = UIButton(type: .system)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,18 +27,25 @@ class MainViewController: UIViewController {
     }
     
     private func setAttributes(){
-        view.backgroundColor = .systemGray6
+        view.backgroundColor = .white
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.cellId)
-        tableView.backgroundColor = .systemGray6
+        tableView.backgroundColor = .white
         tableView.sectionFooterHeight = 7
         tableView.sectionHeaderHeight = 7
+        
+        setButtonAttributes()
+    }
+    private func setButtonAttributes(){
+        bottomButton.setTitle("새로운 회고", for: .normal)
+        bottomButton.setImage(UIImage(systemName: "plus"), for: .normal)
+        bottomButton.backgroundColor = .white
     }
     
     private func setConstraints(){
         let topImageView = UIImageView(image: topImage)
-        [tableView, topImageView].forEach {
+        [tableView, topImageView, bottomButton].forEach {
             view.addSubview($0)
             $0.translatesAutoresizingMaskIntoConstraints = false
         }
@@ -47,7 +55,11 @@ class MainViewController: UIViewController {
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.topAnchor.constraint(equalTo: topImageView.bottomAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            bottomButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0),
+            bottomButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+            bottomButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
+            bottomButton.heightAnchor.constraint(equalToConstant: 70),
         ])
     }
 }

@@ -49,6 +49,8 @@ class CustomTableViewCell: UITableViewCell {
         bgView.layer.cornerRadius = 10
         bgView.backgroundColor = .white
         bgView.layer.masksToBounds = false
+        bgView.layer.borderWidth = 1
+        bgView.layer.borderColor = UIColor.systemGray6.cgColor
         
         bgView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
