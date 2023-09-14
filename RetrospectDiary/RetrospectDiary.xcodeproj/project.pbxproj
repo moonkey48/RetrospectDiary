@@ -7,23 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9517A1512AAF60EB003D640D /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9517A1502AAF60EB003D640D /* Date+Extension.swift */; };
+		9517A1532AB0811A003D640D /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9517A1522AB0811A003D640D /* UIView+Extension.swift */; };
+		9517A1552AB086AC003D640D /* RetrospectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9517A1542AB086AC003D640D /* RetrospectDetailViewController.swift */; };
+		9517A1572AB3358F003D640D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9517A1562AB3358F003D640D /* Colors.xcassets */; };
+		9517A1592AB33E3B003D640D /* NewRetrospectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9517A1582AB33E3B003D640D /* NewRetrospectViewController.swift */; };
 		95D609D42AAC4424005DCD1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D609D32AAC4424005DCD1A /* AppDelegate.swift */; };
 		95D609D62AAC4424005DCD1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D609D52AAC4424005DCD1A /* SceneDelegate.swift */; };
-		95D609D82AAC4424005DCD1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D609D72AAC4424005DCD1A /* ViewController.swift */; };
+		95D609D82AAC4424005DCD1A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D609D72AAC4424005DCD1A /* MainViewController.swift */; };
 		95D609DE2AAC4424005DCD1A /* RetrospectDiary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95D609DC2AAC4424005DCD1A /* RetrospectDiary.xcdatamodeld */; };
 		95D609E02AAC4426005DCD1A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95D609DF2AAC4426005DCD1A /* Images.xcassets */; };
 		95D609E32AAC4426005DCD1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D609E12AAC4426005DCD1A /* LaunchScreen.storyboard */; };
+		95D609F22AADB0BD005DCD1A /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D609F12AADB0BD005DCD1A /* CustomTableViewCell.swift */; };
+		95D609F52AADB392005DCD1A /* RetrospectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D609F42AADB392005DCD1A /* RetrospectModel.swift */; };
+		95D609F72AADB847005DCD1A /* RetrospectMethodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D609F62AADB847005DCD1A /* RetrospectMethodModel.swift */; };
+		95D609FB2AADBCD7005DCD1A /* RetrospectMethodTypeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D609FA2AADBCD7005DCD1A /* RetrospectMethodTypeProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9517A1502AAF60EB003D640D /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		9517A1522AB0811A003D640D /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		9517A1542AB086AC003D640D /* RetrospectDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrospectDetailViewController.swift; sourceTree = "<group>"; };
+		9517A1562AB3358F003D640D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		9517A1582AB33E3B003D640D /* NewRetrospectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRetrospectViewController.swift; sourceTree = "<group>"; };
 		95D609D02AAC4424005DCD1A /* RetrospectDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetrospectDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D609D32AAC4424005DCD1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95D609D52AAC4424005DCD1A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		95D609D72AAC4424005DCD1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		95D609D72AAC4424005DCD1A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		95D609DD2AAC4424005DCD1A /* RetrospectDiary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RetrospectDiary.xcdatamodel; sourceTree = "<group>"; };
 		95D609DF2AAC4426005DCD1A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		95D609E22AAC4426005DCD1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95D609E42AAC4426005DCD1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95D609F12AADB0BD005DCD1A /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		95D609F42AADB392005DCD1A /* RetrospectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrospectModel.swift; sourceTree = "<group>"; };
+		95D609F62AADB847005DCD1A /* RetrospectMethodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrospectMethodModel.swift; sourceTree = "<group>"; };
+		95D609FA2AADBCD7005DCD1A /* RetrospectMethodTypeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrospectMethodTypeProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +55,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9517A14F2AAF60D8003D640D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9517A1502AAF60EB003D640D /* Date+Extension.swift */,
+				9517A1522AB0811A003D640D /* UIView+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		95D609C72AAC4424005DCD1A = {
 			isa = PBXGroup;
 			children = (
@@ -69,7 +96,9 @@
 			children = (
 				95D609D32AAC4424005DCD1A /* AppDelegate.swift */,
 				95D609D52AAC4424005DCD1A /* SceneDelegate.swift */,
+				95D609F82AADBCB6005DCD1A /* Utils */,
 				95D609ED2AAC4482005DCD1A /* Controller */,
+				95D609F32AADB363005DCD1A /* Model */,
 				95D609EC2AAC4470005DCD1A /* View */,
 			);
 			path = Source;
@@ -79,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				95D609DF2AAC4426005DCD1A /* Images.xcassets */,
+				9517A1562AB3358F003D640D /* Colors.xcassets */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -86,6 +116,7 @@
 		95D609EC2AAC4470005DCD1A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				95D609EE2AAC8F0E005DCD1A /* Components */,
 				95D609E12AAC4426005DCD1A /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -94,9 +125,45 @@
 		95D609ED2AAC4482005DCD1A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				95D609D72AAC4424005DCD1A /* ViewController.swift */,
+				95D609D72AAC4424005DCD1A /* MainViewController.swift */,
+				9517A1542AB086AC003D640D /* RetrospectDetailViewController.swift */,
+				9517A1582AB33E3B003D640D /* NewRetrospectViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		95D609EE2AAC8F0E005DCD1A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				95D609F12AADB0BD005DCD1A /* CustomTableViewCell.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		95D609F32AADB363005DCD1A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				95D609F42AADB392005DCD1A /* RetrospectModel.swift */,
+				95D609F62AADB847005DCD1A /* RetrospectMethodModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		95D609F82AADBCB6005DCD1A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9517A14F2AAF60D8003D640D /* Extension */,
+				95D609F92AADBCBD005DCD1A /* Protocol */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		95D609F92AADBCBD005DCD1A /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				95D609FA2AADBCD7005DCD1A /* RetrospectMethodTypeProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +224,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9517A1572AB3358F003D640D /* Colors.xcassets in Resources */,
 				95D609E32AAC4426005DCD1A /* LaunchScreen.storyboard in Resources */,
 				95D609E02AAC4426005DCD1A /* Images.xcassets in Resources */,
 			);
@@ -170,9 +238,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				95D609DE2AAC4424005DCD1A /* RetrospectDiary.xcdatamodeld in Sources */,
-				95D609D82AAC4424005DCD1A /* ViewController.swift in Sources */,
+				95D609FB2AADBCD7005DCD1A /* RetrospectMethodTypeProtocol.swift in Sources */,
+				9517A1552AB086AC003D640D /* RetrospectDetailViewController.swift in Sources */,
+				95D609F22AADB0BD005DCD1A /* CustomTableViewCell.swift in Sources */,
+				9517A1592AB33E3B003D640D /* NewRetrospectViewController.swift in Sources */,
+				95D609D82AAC4424005DCD1A /* MainViewController.swift in Sources */,
 				95D609D42AAC4424005DCD1A /* AppDelegate.swift in Sources */,
+				95D609F52AADB392005DCD1A /* RetrospectModel.swift in Sources */,
 				95D609D62AAC4424005DCD1A /* SceneDelegate.swift in Sources */,
+				95D609F72AADB847005DCD1A /* RetrospectMethodModel.swift in Sources */,
+				9517A1532AB0811A003D640D /* UIView+Extension.swift in Sources */,
+				9517A1512AAF60EB003D640D /* Date+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,7 +392,6 @@
 				INFOPLIST_FILE = RetrospectDiary/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -345,7 +420,6 @@
 				INFOPLIST_FILE = RetrospectDiary/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
