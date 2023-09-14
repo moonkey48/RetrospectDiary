@@ -41,6 +41,7 @@ class MainViewController: UIViewController {
         bottomButton.setTitle("새로운 회고", for: .normal)
         bottomButton.setImage(UIImage(systemName: "plus"), for: .normal)
         bottomButton.backgroundColor = .white
+        bottomButton.addTarget(self, action: #selector(showNewRetrospectSheet(_:)), for: .touchUpInside)
     }
     
     private func setConstraints(){
@@ -61,6 +62,11 @@ class MainViewController: UIViewController {
             bottomButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
             bottomButton.heightAnchor.constraint(equalToConstant: 70),
         ])
+    }
+    
+    @objc func showNewRetrospectSheet(_ sender: Any){
+        let newRetrospectViewController = NewRetrospectViewController()
+        present(newRetrospectViewController, animated: true)
     }
 }
 
